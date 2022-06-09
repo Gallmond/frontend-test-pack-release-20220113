@@ -2,6 +2,13 @@ $headerFontFamily: sans-serif;
 $regularFontFamily: sans-serif;
 $lightFontFamily: sans-serif;
 
+@mixin reset(){
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 @mixin flexColumn($width: width) {
   display: flex;
   flex-direction: column;
@@ -15,34 +22,48 @@ $lightFontFamily: sans-serif;
 @mixin headerText() {
   text-align: center;
   font-size: 0.5em;
-  font-family: $headerFontFamily
+  font-family: $headerFontFamily;
 }
 @mixin regularText() {
   font-weight: lighter;
   text-align: center;
   font-size: small;
   line-height: 1.25rem;
-  font-family: $regularFontFamily
+  font-family: $regularFontFamily;
 }
 @mixin highlightText {
   font-family: $regularFontFamily;
   font-weight: 700;
-  color:white;
+  color: white;
 }
-@mixin centreDiv{
+@mixin centreDiv {
   margin-left: auto;
   margin-right: auto;
 }
 
-
-.card{
-  @include flexColumn( 270px );
-  box-shadow: 5px 5px 5px 5px #888888b0;
+html, body{
+  @include reset();
+  background-color: wheat;
 }
-.imageContainer{
+
+.container{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  @include flexColumn(270px);
+  box-shadow: 5px 5px 5px 5px #888888b0;
+  height: fit-content;
+  background-color: aliceblue;
+}
+.imageContainer {
   @include fitContent;
 }
-.priceContainer{
+.priceContainer {
   @include fitContent;
   @include highlightText;
   @include centreDiv;
@@ -50,21 +71,20 @@ $lightFontFamily: sans-serif;
   padding: 10px 20px;
   transform: translate(0, -50%);
 }
-.headingContainer{
+.headingContainer {
   @include headerText;
 }
-.descriptionContainer{
+.descriptionContainer {
   @include regularText;
   padding: 0px 10px;
 }
-.lessonContainer{
+.lessonContainer {
   @include regularText;
   border-top: 1px solid rgb(216, 216, 216);
 
-  p{//TODO this isn't working
-    .lessonNumber{
-      font-weight: bolder;
+  p {
+    .lessonNumber {
+      font-weight: 700;
     }
   }
-
 }

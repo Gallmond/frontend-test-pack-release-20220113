@@ -4,8 +4,13 @@
   "description": "This is a quick technical aptitude test for front end development.\r There is a src folder included in this package, try to organise your work in this folder.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --watch ./src/03-styles.scss ./src/03-styles.css",
+    "test": "jest ./src",
+    "build": "sass ./src/03-styles.scss && jest ./src"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
 }
