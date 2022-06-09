@@ -1,0 +1,70 @@
+$headerFontFamily: sans-serif;
+$regularFontFamily: sans-serif;
+$lightFontFamily: sans-serif;
+
+@mixin flexColumn($width: width) {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  width: $width;
+}
+@mixin fitContent() {
+  width: fit-content;
+  height: fit-content;
+}
+@mixin headerText() {
+  text-align: center;
+  font-size: 0.5em;
+  font-family: $headerFontFamily
+}
+@mixin regularText() {
+  font-weight: lighter;
+  text-align: center;
+  font-size: small;
+  line-height: 1.25rem;
+  font-family: $regularFontFamily
+}
+@mixin highlightText {
+  font-family: $regularFontFamily;
+  font-weight: 700;
+  color:white;
+}
+@mixin centreDiv{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card{
+  @include flexColumn( 270px );
+  box-shadow: 5px 5px 5px 5px #888888b0;
+}
+.imageContainer{
+  @include fitContent;
+}
+.priceContainer{
+  @include fitContent;
+  @include highlightText;
+  @include centreDiv;
+  background-color: orange;
+  padding: 10px 20px;
+  transform: translate(0, -50%);
+}
+.headingContainer{
+  @include headerText;
+}
+.descriptionContainer{
+  @include regularText;
+  padding: 0px 10px;
+}
+.lessonContainer{
+  @include regularText;
+  border-top: 1px solid rgb(216, 216, 216);
+
+  p{//TODO this isn't working
+    .lessonNumber{
+      font-weight: bolder;
+    }
+  }
+
+}

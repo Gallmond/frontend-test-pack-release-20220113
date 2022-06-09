@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  width: 270px;
+  box-shadow: 5px 5px 5px 5px rgba(136, 136, 136, 0.6901960784);
+}
+
+.imageContainer {
+  width: fit-content;
+  height: fit-content;
+}
+
+.priceContainer {
+  width: fit-content;
+  height: fit-content;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+  padding: 10px 20px;
+  transform: translate(0, -50%);
+}
+
+.headingContainer {
+  text-align: center;
+  font-size: 0.5em;
+  font-family: sans-serif;
+}
+
+.descriptionContainer {
+  font-weight: lighter;
+  text-align: center;
+  font-size: small;
+  line-height: 1.25rem;
+  font-family: sans-serif;
+  padding: 0px 10px;
+}
+
+.lessonContainer {
+  font-weight: lighter;
+  text-align: center;
+  font-size: small;
+  line-height: 1.25rem;
+  font-family: sans-serif;
+  border-top: 1px solid rgb(216, 216, 216);
+}
+.lessonContainer p .lessonNumber {
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=03-styles.css.map */

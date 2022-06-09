@@ -1,0 +1,11 @@
+{
+  "name": "frontend-test-pack-release-20220113",
+  "version": "1.0.0",
+  "description": "This is a quick technical aptitude test for front end development.\r There is a src folder included in this package, try to organise your work in this folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
