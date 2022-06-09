@@ -1,28 +1,27 @@
 const people = [
-  { name: "Bob", age: 29 },
-  { name: "Alice", age: 42 },
-  { name: "Greg", age: 23 },
-  { name: "Jean", age: 50 },
-];
+  { name: 'Bob', age: 29 },
+  { name: 'Alice', age: 42 },
+  { name: 'Greg', age: 23 },
+  { name: 'Jean', age: 50 },
+]
 
-const orderAgeDescending = ( people ) => {
+const orderAgeDescending = (people) => {
   return people.sort((a, b) => {
-    return a.age < b.age ? 1 : -1;
+    return a.age < b.age ? 1 : -1
   })
 }
 
-const orderNameAlphabeticallyAscending = ( people ) => {
+const orderNameAlphabeticallyAscending = (people) => {
   return people.sort((a, b) => {
-    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1
   })
 }
 
-const getAges = ( people ) => {
+const getAges = (people) => {
   return people.map(person => person.age)
 }
 
-console.log('people', people);
-console.log('orderAgeDescending(people)', orderAgeDescending(people));
-console.log('orderNameAlphabeticallyAscending(people)', orderNameAlphabeticallyAscending(people));
-console.log('getAges(people)', getAges(people));
-
+console.log('people', people)
+console.log('orderAgeDescending(people)', orderAgeDescending(people))
+console.log('orderNameAlphabeticallyAscending(people)', orderNameAlphabeticallyAscending(people))
+console.log('getAges(people)', getAges(people))
