@@ -9,8 +9,9 @@ const { isPalindrome } = require('./01-palindrome')
 
 test('can correctly identify palindromes', () => {
   const danDroop = isPalindrome('poordanisinadroop')
-  const fooBar = isPalindrome('fooBar')
   expect(danDroop).toBe(true)
+
+  const fooBar = isPalindrome('fooBar')
   expect(fooBar).toBe(false)
 })
 
